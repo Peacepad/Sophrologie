@@ -97,6 +97,7 @@ header {
 
 .header-nav__scrolling {
   position: relative;
+  width: 159px;
   &::after {
     content: ">";
     margin-left: 7px;
@@ -117,6 +118,7 @@ header {
   transform: translateX(-50%) scaley(0);
   text-align: center;
   transform-origin: top;
+  width: 159px;
   & li:hover {
     border-bottom: none;
     background-color: darken($back-color, 10%);

@@ -93,6 +93,7 @@ header a {
 
 .header-nav__scrolling {
   position: relative;
+  width: 159px;
 }
 .header-nav__scrolling::after {
   content: ">";
@@ -113,6 +114,7 @@ header a {
   transform: translateX(-50%) scaley(0);
   text-align: center;
   transform-origin: top;
+  width: 159px;
 }
 .header-nav__subnav li:hover {
   border-bottom: none;
@@ -214,17 +216,17 @@ header a {
   box-shadow: none;
 }
 
-.article-prestation {
+.article-presentation, .article-hypno {
   background-color: white;
   padding: 40px;
 }
-.article-prestation h3 {
+.article-presentation h3, .article-hypno h3 {
   font-size: 1.5em;
   color: #734c4f;
   text-transform: uppercase;
 }
 
-.article-slider img {
+.article-slider, .article-slider-hypno img {
   height: 400px;
 }
 
@@ -449,6 +451,162 @@ footer li {
   list-style-type: none;
 }
 
+/* Slideshow container */
+.slideshow-hypno-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides-hypno {
+  display: none;
+}
+.mySlides-hypno img {
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev-hypno,
+.next-hypno {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #FFB5BE;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next-hypno {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev-hypno:hover,
+.next-hypno:hover {
+  color: #ff8291;
+}
+
+/* Caption text */
+.text-hypno {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext-hypno {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot-hypno {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #FFB5BE;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot-hypno:hover {
+  background-color: #ff8291;
+}
+
+/* Fading animation */
+.fade-hypno {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.hypno-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  height: 400px;
+}
+
+.hypno-avatar {
+  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+  margin: none;
+  display: flex;
+}
+.hypno-avatar img {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hypno-container1 {
+  background: url(../../pict/assets/forme1.png) no-repeat;
+  background-size: contain;
+}
+
+.hypno-container2 {
+  background: url(../../pict/assets/forme2.png) no-repeat;
+  background-size: contain;
+}
+
+.hypno-container3 {
+  background: url(../../pict/assets/forme3.png) no-repeat;
+  background-size: contain;
+}
+
+.hypno-resume {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  border: solid 1px #FFB5BE;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "PT SANS", sans-serif;

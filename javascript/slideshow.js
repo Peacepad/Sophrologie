@@ -20,9 +20,36 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
+ 
   slides[slideIndex-1].style.display = "flex";
-  dots[slideIndex-1].className += " active";
+  
+}
+
+// ----- Article hypno
+
+var slideIndexHypno = 1;
+showSlidesHypno(slideIndexHypno);
+
+// Next/previous controls
+function plusSlidesHypno(n) {
+  showSlidesHypno(slideIndexHypno += n);
+}
+
+// Thumbnail image controls
+function currentSlideHypno(n) {
+  showSlidesHypno(slideIndexHypno = n);
+}
+
+function showSlidesHypno(n) {
+  var i;
+  var slidesHypno = document.getElementsByClassName("mySlides-hypno");
+  
+  if (n > slidesHypno.length) {slideIndexHypno = 1}
+  if (n < 1) {slideIndexHypno = slidesHypno.length}
+  for (i = 0; i < slidesHypno.length; i++) {
+      slidesHypno[i].style.display = "none";
+  }
+
+  slidesHypno[slideIndexHypno-1].style.display = "flex";
+
 }

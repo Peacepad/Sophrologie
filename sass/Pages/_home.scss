@@ -79,7 +79,7 @@
 
 //------------------
 
-.article-prestation {
+.article-presentation, .article-hypno {
   background-color: white;
   padding: 40px;
   & h3 {
@@ -89,7 +89,7 @@
   }
 }
 
-.article-slider img {
+.article-slider, .article-slider-hypno img {
   height: 400px;
 }
 
