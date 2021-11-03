@@ -82,10 +82,7 @@
 
 /* Fading animation */
 .fade-hypno {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation: fade-hypno 0.5s forwards;
 }
 
 .hypno-container {
@@ -97,6 +94,7 @@
   margin: auto;
   position: relative;
   height: 400px;
+  width: 80%;
 }
 
 .hypno-avatar {
@@ -116,14 +114,17 @@
 .hypno-container1 {
   background: url(../../pict/assets/forme1.png) no-repeat;
   background-size: contain;
+  background-position: center;
 }
 .hypno-container2 {
   background: url(../../pict/assets/forme2.png) no-repeat;
   background-size: contain;
+  background-position: center;
 }
 .hypno-container3 {
   background: url(../../pict/assets/forme3.png) no-repeat;
   background-size: contain;
+  background-position: center;
 }
 .hypno-resume {
   display: flex;
@@ -134,11 +135,10 @@
   height: 100px;
   border-radius: 5px;
   border: solid 1px $secondary-color;
-
   background-color: rgba(255,255,255, 0.8);
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fade-hypno {
   from {
     opacity: 0.4;
   }
@@ -147,11 +147,21 @@
   }
 }
 
-@keyframes fade {
-  from {
+@keyframes fade-hypno {
+  0% {
+      transform: scaleX(0.9) translateX(250px);
+      transform-origin: left;
     opacity: 0.4;
+
   }
-  to {
+  50%{
     opacity: 1;
+    transform: scalex(1.1);
+  }
+  90%{
+    transform: scalex(0.99);
+  }
+  100%{
+    transform: scalex(1);
   }
 }
