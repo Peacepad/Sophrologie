@@ -1,0 +1,23 @@
+@import "./Utils/_variables";
+@import "./Layouts/header";
+@import "./Pages/home";
+@import "./Layouts/slider";
+@import "./Composants/cards";
+@import "./Pages/hypnose-text";
+@import "./Layouts/footer";
+
+* {
+  box-sizing: border-box;
+  font-family: "PT SANS", sans-serif;
+}
+
+body {
+  background-color: $back-color;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: $secondary-color;
+}
