@@ -203,6 +203,15 @@ header a {
   padding-left: 30px;
   padding-right: 30px;
   box-shadow: 0px 10px 16px 1px rgba(255, 181, 190, 0.75);
+  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out;
+}
+.main-home__button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.main-home__button:active {
+  transform: scale(0.99);
+  box-shadow: none;
 }
 
 .article-prestation {
@@ -406,6 +415,10 @@ header a {
 .main-hypnose-text {
   width: 90%;
   margin: auto;
+  border-left: 1px #734c4f solid;
+}
+.main-hypnose-text__presentation {
+  padding-left: 40px;
 }
 .main-hypnose-text h2 {
   color: #734c4f;

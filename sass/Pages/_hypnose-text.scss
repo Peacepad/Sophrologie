@@ -1,6 +1,10 @@
 .main-hypnose-text {
     width: 90%;
     margin:auto;
+    &__presentation {
+        padding-left: 40px;
+    }
+    border-left: 1px $primary-color solid;
     & h2 {
         color: $primary-color;
         text-transform: uppercase;
