@@ -35,18 +35,19 @@ header a {
   font-size: 1.1em;
   padding-left: 5px;
   padding-right: 5px;
+  border-radius: 2px;
 }
 .header-nav ul li a {
   color: #734c4f;
 }
 .header-nav ul li:hover {
-  background-color: #fac5c5;
+  background-color: #fcdddd;
 }
 
 .header-account {
   position: absolute;
   right: 20px;
-  width: 150px;
+  width: 200px;
 }
 
 .header-account ul {
@@ -57,6 +58,7 @@ header a {
 }
 .header-account ul li {
   list-style-type: none;
+  font-size: 1.2em;
 }
 
 .header-account__cart {
@@ -84,11 +86,12 @@ header a {
 }
 
 .header-account__button {
-  background-color: #FFB5BE;
+  background: linear-gradient(90deg, #ff4f64, #ff8291);
   color: white;
   border: none;
-  padding: 5px;
+  padding: 4px;
   border-radius: 5px;
+  font-size: 0.9em;
 }
 
 .header-nav__scrolling {
@@ -99,6 +102,7 @@ header a {
   content: ">";
   margin-left: 7px;
   display: inline-block;
+  transform: rotate(90deg);
 }
 
 .header-nav__subnav {
@@ -118,33 +122,13 @@ header a {
 }
 .header-nav__subnav li:hover {
   border-bottom: none;
-  background-color: #fac5c5;
-}
-
-.header-nav__scrolling:hover::after {
-  animation: rotationFleche 0.2s linear forwards;
 }
 
 .header-nav__scrolling:hover > .header-nav__subnav {
-  animation: apparitionSousMenu 0.2s forwards ease-out;
+  transform: translateX(-50%) scaleY(1);
+  background-color: white;
 }
 
-@keyframes apparitionSousMenu {
-  0% {
-    transform: translateX(-50%) scaley(0);
-  }
-  100% {
-    transform: translateX(-50%) scaley(1);
-  }
-}
-@keyframes rotationFleche {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
 .main-home {
   width: 90%;
   margin: auto;
@@ -159,6 +143,10 @@ header a {
   position: relative;
   margin-top: 100px;
   box-shadow: -16px 10px 18px 2px rgba(255, 181, 190, 0.41);
+  transition: transform linear 1s;
+}
+.main-home__image:hover {
+  transform: scale(1.01);
 }
 .main-home__image img {
   height: 100%;
@@ -178,6 +166,8 @@ header a {
   width: 50%;
   border-left: 1px solid #734c4f;
   padding-left: 10%;
+  display: flex;
+  flex-direction: column;
 }
 .main-home__text h2 {
   font-weight: 700;
@@ -185,19 +175,19 @@ header a {
   font-size: 3em;
   text-transform: uppercase;
 }
-.main-home__text h3 {
+.main-home__text p {
   font-weight: 400;
   color: #734c4f;
-  font-size: 2em;
-}
-.main-home__text p {
-  text-align: right;
-  margin-top: 20px;
+  font-size: 1.5em;
 }
 
 .main-home__button {
   background: linear-gradient(90deg, #ff4f64, #ff8291);
   color: white;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
   font-size: 1em;
   border: none;
   border-radius: 30px;
@@ -205,7 +195,7 @@ header a {
   padding-left: 30px;
   padding-right: 30px;
   box-shadow: 0px 10px 16px 1px rgba(255, 181, 190, 0.75);
-  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, transform 200ms ease-in-out;
 }
 .main-home__button:hover {
   cursor: pointer;
@@ -216,17 +206,20 @@ header a {
   box-shadow: none;
 }
 
-.article-presentation, .article-hypno {
+.article-presentation,
+.article-hypno {
   background-color: white;
   padding: 40px;
 }
-.article-presentation h3, .article-hypno h3 {
+.article-presentation h3,
+.article-hypno h3 {
   font-size: 1.5em;
   color: #734c4f;
   text-transform: uppercase;
 }
 
-.article-slider, .article-slider-hypno img {
+.article-slider,
+.article-slider-hypno img {
   height: 400px;
 }
 
@@ -273,6 +266,19 @@ header a {
 .contact-child__phone {
   font-size: 2em;
   font-weight: 700;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.newsletter form {
+  margin-top: 10px;
+  border-top: 1px solid #734c4f;
+  padding-top: 10px;
 }
 
 /* Slideshow container */
@@ -391,6 +397,7 @@ header a {
   text-align: center;
   border-radius: 5px;
   transition: transform 500ms;
+  border: solid 3px #FFB5BE;
 }
 .card-img {
   width: 300px;
@@ -546,6 +553,11 @@ footer li {
   position: relative;
   height: 400px;
   width: 80%;
+  transition: transform 500ms;
+  cursor: pointer;
+}
+.hypno-container:hover {
+  transform: scale(1.1);
 }
 
 .hypno-avatar {
@@ -563,19 +575,19 @@ footer li {
 }
 
 .hypno-container1 {
-  background: url(../../pict/assets/forme1.png) no-repeat;
+  background: url(../pict/assets/forme1.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .hypno-container2 {
-  background: url(../../pict/assets/forme2.png) no-repeat;
+  background: url(../pict/assets/forme2.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .hypno-container3 {
-  background: url(../../pict/assets/forme3.png) no-repeat;
+  background: url(../pict/assets/forme3.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -617,6 +629,136 @@ footer li {
     transform: scalex(1);
   }
 }
+.connexion, .subscription {
+  display: flex;
+}
+.connexion h2, .subscription h2 {
+  color: #734c4f;
+}
+.connexion h2 span, .subscription h2 span {
+  color: #FFB5BE;
+}
+.connexion p, .subscription p {
+  color: grey;
+  font-style: oblique;
+}
+
+#login, #register {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #FFB5BE;
+  height: 380px;
+  width: 30%;
+  border-radius: 3px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+#login #login__email,
+#login #login__password, #login #register__email, #login #register__password, #login #register__password2, #register #login__email,
+#register #login__password, #register #register__email, #register #register__password, #register #register__password2 {
+  border: #734c4f 1px solid;
+  border-radius: 30px;
+  height: 30px;
+}
+#login label, #register label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#login__email,
+#login__password,
+#login__submit, #connexion-subscribe__button,
+#register__email, #register__password, #register__password2, #register__submit {
+  width: 300px;
+  font-size: 1em;
+}
+
+#login__email, #register__email {
+  background: url(../pict/assets/envelope.svg) no-repeat 10px;
+  padding-left: 30px;
+}
+
+#login__password, #register__password, #register__password2 {
+  background: url(../pict/assets/padlock.png) no-repeat 10px;
+  padding-left: 30px;
+}
+
+.connexion-subscribe {
+  border: solid 1px #FFB5BE;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.connexion-subscribe h2 {
+  color: #734c4f;
+}
+
+#connexion-subscribe__button, #register__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  justify-content: space-between;
+}
+.newsletter input {
+  border-radius: 30px;
+  border: none;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}
+
+#newsletter-submit, #login__submit, #connexion-subscribe__button, #register__submit {
+  background: linear-gradient(90deg, #ff4f64, #ff8291);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  height: 30px;
+  text-decoration: none;
+}
+
+.main-home__button {
+  background: linear-gradient(90deg, #ff4f64, #ff8291);
+  color: white;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0px 10px 16px 1px rgba(255, 181, 190, 0.75);
+  transition: box-shadow 500ms ease-in-out, transform 200ms ease-in-out;
+}
+.main-home__button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.main-home__button:active {
+  transform: scale(0.99);
+  box-shadow: none;
+}
+
 * {
   box-sizing: border-box;
   font-family: "PT SANS", sans-serif;

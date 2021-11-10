@@ -95,6 +95,11 @@
   position: relative;
   height: 400px;
   width: 80%;
+  transition: transform 500ms;
+  cursor: pointer;
+  &:hover {
+    transform:scale(1.1)
+  }
 }
 
 .hypno-avatar {
@@ -112,17 +117,17 @@
 }
 
 .hypno-container1 {
-  background: url(../../pict/assets/forme1.png) no-repeat;
+  background: url(../pict/assets/forme1.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
 .hypno-container2 {
-  background: url(../../pict/assets/forme2.png) no-repeat;
+  background: url(../pict/assets/forme2.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
 .hypno-container3 {
-  background: url(../../pict/assets/forme3.png) no-repeat;
+  background: url(../pict/assets/forme3.png) no-repeat;
   background-size: contain;
   background-position: center;
 }

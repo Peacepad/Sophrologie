@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sophrologie</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8ee2930e57.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <a href="../index.html" alt="Accueil"><h1>Hypnose</h1></a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li class="header-nav__scrolling">
+            Textes d'hypnose
+            <ul class="header-nav__subnav">
+              <li>Sommeil</li>
+              <li>Bien être</li>
+              <li>Anti-Stress</li>
+              <li>Santé</li>
+              <li>Spiritualité</li>
+            </ul>
+          </li>
+          <li>Formations</li>
+          <li>Pratiques</li>
+          <li>Votre thérapeute</li>
+          <li>La séance</li>
+        </ul>
+      </nav>
+
+      <div class="header-account">
+        <ul>
+          <li>
+            <button class="header-account__button">
+              <i class="fas fa-user"></i> Mon compte
+            </button>
+          </li>
+          <li class="header-account__cart">
+            <i class="fas fa-shopping-basket"></i>
+            <div class="cart-number">0</div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="subscription">
+      <form id="register">
+        <h2>Inscription <span>Hypnose</span></h2>
+        <p>Tout les champs sont obligatoires</p>
+        <label
+          >Adresse Email
+          <input type="email" name="email" id="register__email" />
+        </label>
+        <label
+          >Mot de passe
+          <input type="password" id="register__password" />
+        </label>
+        <label
+          >Confirmez le mot de passe
+          <input type="password" id="register__password2" />
+        </label>
+        <input type="submit" id="register__submit" />
+      </form>
+    </main>
+
+    <aside class="connexion-subscribe">
+        <h2>Déjà inscrit ?</h2>
+        <a id="connexion-subscribe__button" href="connexion.html">Se connecter</a>
+    </aside>
+  </body>
+</html>

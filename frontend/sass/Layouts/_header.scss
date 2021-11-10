@@ -11,13 +11,11 @@ header {
   padding-right: 20px;
   & a {
     text-decoration: none;
-
-}
+  }
 }
 
 .header-logo {
   margin-right: 60px;
-
 }
 
 .header-nav {
@@ -35,11 +33,12 @@ header {
     font-size: 1.1em;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 2px;
     & a {
-        color: $primary-color;
+      color: $primary-color;
     }
     &:hover {
-      background-color: darken($back-color, 10%);
+      background-color: darken($back-color, 5%);
     }
   }
 }
@@ -47,7 +46,7 @@ header {
 .header-account {
   position: absolute;
   right: 20px;
-  width: 150px;
+  width: 200px;
 }
 
 .header-account ul {
@@ -57,7 +56,7 @@ header {
   font-size: 1em;
   & li {
     list-style-type: none;
-    
+    font-size: 1.2em;
   }
 }
 
@@ -82,15 +81,24 @@ header {
   top: 0px;
   left: 50%;
   font-size: 0.8em;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 .header-account__button {
-  background-color: $secondary-color;
+  background: linear-gradient(
+    90deg,
+    darken($secondary-color, 20%),
+    darken($secondary-color, 10%)
+  );
+
   color: white;
   border: none;
-  padding: 5px;
+  padding: 4px;
   border-radius: 5px;
+  font-size: 0.9em;
+  
+  
+  
 }
 
 // --------------- Menu déroulant
@@ -99,9 +107,11 @@ header {
   position: relative;
   width: 159px;
   &::after {
+    
     content: ">";
     margin-left: 7px;
     display: inline-block;
+    transform: rotate(90deg);
   }
 }
 
@@ -119,35 +129,13 @@ header {
   text-align: center;
   transform-origin: top;
   width: 159px;
+
   & li:hover {
     border-bottom: none;
-    background-color: darken($back-color, 10%);
   }
-}
-
-.header-nav__scrolling:hover::after {
-  animation: rotationFleche 0.2s linear forwards;
 }
 
 .header-nav__scrolling:hover > .header-nav__subnav {
-  animation: apparitionSousMenu 0.2s forwards ease-out;
-}
-
-@keyframes apparitionSousMenu {
-  0% {
-    transform: translateX(-50%) scaley(0);
-  }
-
-  100% {
-    transform: translateX(-50%) scaley(1);
-  }
-}
-
-@keyframes rotationFleche {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
+  transform: translateX(-50%) scaleY(1);
+  background-color: lighten($back-color, 10%);
 }

@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Sophrologie</title>
+    <title>Boutique de textes d'hypnose</title>
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Google Font -->
@@ -23,12 +23,12 @@
   <body>
     <header>
       <div class="header-logo">
-        <a href="index.html"><h1>Sophrologie</h1></a>
+        <a href="index.html"><h1>Hypnose</h1></a>
       </div>
       <nav class="header-nav">
         <ul>
           <li class="header-nav__scrolling">
-            <a href="./pages/textes_hypnose.html">Textes d'hypnose</a>
+            <a href="./pages/textes_hypnose.html">Textes d'hypnose </a>
             <ul class="header-nav__subnav">
               <li>Sommeil</li>
               <li>Bien être</li>
@@ -37,19 +37,19 @@
               <li>Spiritualité</li>
             </ul>
           </li>
+          <li>Découverte</li>
           <li>Formations</li>
-          
           <li>Votre thérapeute</li>
-          
+          <li>Aide</li>
         </ul>
       </nav>
 
       <div class="header-account">
         <ul>
           <li>
-            <button class="header-account__button">
-              <i class="fas fa-user"></i> Mon compte
-            </button>
+            <a class="header-account__button" href="./pages/connexion.html">
+              <i class="fas fa-user"></i> Se connecter
+            </a>
           </li>
           <li class="header-account__cart">
             <i class="fas fa-shopping-basket"></i>
@@ -61,13 +61,9 @@
 
     <main class="main-home">
       <div class="main-home__text">
-        <h2>Cabinet de Psychologie et de Sophrologie</h2>
-        <h3>à Charmes sur Rhône et Valence</h3>
-        <button class="main-home__button">Prendre rendez-vous</button>
-        <p>
-          Ouvert du lundi au mardi et du jeudi au samedi de 8h30 à 21h <br />
-          86 avenue de Provence, Pôle santé 07800 Charmes-sur-Rhone
-        </p>
+        <h2>Boutique de textes d'hypnose thérapeutique</h2>
+        <p>Gamme de produits variés et adaptés aux besoins de vos clients</p>
+        <a class="main-home__button" href="pages/textes_hypnose.html">Explorer le catalogue</a>
       </div>
 
       <div class="main-home__image">
@@ -101,7 +97,7 @@
             <div class="hypno-avatar">
               <img src="./pict/biendormir.jpg" alt="bien dormir" />
             </div>
-            <div class="hypno-resume ">
+            <div class="hypno-resume">
               Ce texte explique comment bien dormir, découvrez les méthodes qui
               vous permettrons dès ce soir de profiter ...
             </div>
@@ -113,8 +109,9 @@
             <div class="hypno-avatar">
               <img src="./pict/productivite.jpg" alt="bien dormir" />
             </div>
-            <div class="hypno-resume ">
-              Vous allez en quelques temps multiplier votre rendement, changer votre rapport au travail. Vos collègues n'en ...
+            <div class="hypno-resume">
+              Vous allez en quelques temps multiplier votre rendement, changer
+              votre rapport au travail. Vos collègues n'en ...
             </div>
           </div>
         </div>
@@ -124,8 +121,6 @@
         <a class="next-hypno" onclick="plusSlidesHypno(1)">&#10095;</a>
       </div>
       <br />
-
-      
     </article>
 
     <article class="article-pourquoi">
@@ -221,7 +216,19 @@
       </div>
     </article>
 
-    
+    <article class="newsletter">
+      Abonnez-vous à la newsletter pour recevoir les nouveautés.
+
+      <form>
+        <label for="nom">Votre nom</label>
+        <input type="text" name="nom" />
+      
+        <label for="email">Votre adresse mail</label>
+        <input type="email" name="email" />
+      
+        <input type="submit" id="newsletter-submit" />
+      </form>
+    </article>
 
     <aside class="contact">
       <div class="contact-child"><a>annabelle@sophrologie.com</a></div>
