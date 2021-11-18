@@ -629,27 +629,35 @@ footer li {
     transform: scalex(1);
   }
 }
-.connexion, .subscription {
-  display: flex;
+.connexion,
+.subscription {
+  position: relative;
+  width: 30%;
+  margin: auto;
 }
-.connexion h2, .subscription h2 {
+.connexion h2,
+.subscription h2 {
   color: #734c4f;
+  margin: 0;
+  font-size: 1.7em;
 }
-.connexion h2 span, .subscription h2 span {
+.connexion h2 span,
+.subscription h2 span {
   color: #FFB5BE;
 }
-.connexion p, .subscription p {
+.connexion p,
+.subscription p {
   color: grey;
   font-style: oblique;
 }
 
-#login, #register {
+#login,
+#register {
   margin: auto;
   display: flex;
   flex-direction: column;
   border: solid 1px #FFB5BE;
-  height: 380px;
-  width: 30%;
+  height: 400px;
   border-radius: 3px;
   background-color: white;
   align-items: center;
@@ -657,13 +665,21 @@ footer li {
   padding: 20px;
 }
 #login #login__email,
-#login #login__password, #login #register__email, #login #register__password, #login #register__password2, #register #login__email,
-#register #login__password, #register #register__email, #register #register__password, #register #register__password2 {
+#login #login__password,
+#login #register__email,
+#login #register__password,
+#login #register__password2,
+#register #login__email,
+#register #login__password,
+#register #register__email,
+#register #register__password,
+#register #register__password2 {
   border: #734c4f 1px solid;
   border-radius: 30px;
   height: 30px;
 }
-#login label, #register label {
+#login label,
+#register label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -671,20 +687,14 @@ footer li {
 
 #login__email,
 #login__password,
-#login__submit, #connexion-subscribe__button,
-#register__email, #register__password, #register__password2, #register__submit {
+#login__submit,
+#connexion-subscribe__button,
+#register__email,
+#register__password,
+#register__password2,
+#register__submit {
   width: 300px;
   font-size: 1em;
-}
-
-#login__email, #register__email {
-  background: url(../pict/assets/envelope.svg) no-repeat 10px;
-  padding-left: 30px;
-}
-
-#login__password, #register__password, #register__password2 {
-  background: url(../pict/assets/padlock.png) no-repeat 10px;
-  padding-left: 30px;
 }
 
 .connexion-subscribe {
@@ -703,13 +713,79 @@ footer li {
   color: #734c4f;
 }
 
-#connexion-subscribe__button, #register__submit {
+#connexion-subscribe__button,
+#register__submit {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1em;
 }
 
+#login__email,
+#register__email {
+  background: url(../pict/assets/envelope.svg) no-repeat 10px;
+  padding-left: 30px;
+  outline: none;
+}
+
+#login__password,
+#register__password,
+#register__password2 {
+  background: url(../pict/assets/padlock.png) no-repeat 10px;
+  padding-left: 30px;
+  outline: none;
+}
+
+.valid {
+  filter: invert(17%) sepia(52%) saturate(4553%) hue-rotate(99deg) brightness(97%) contrast(104%);
+}
+
+#subscription__email-incorrect,
+#subscription__password-incorrect {
+  position: absolute;
+  background-color: white;
+  width: 160px;
+  padding: 2px;
+  text-align: center;
+  border: solid 1px #FFB5BE;
+  border-radius: 3px;
+  animation: pop-up-error 1s infinite, apparition 500ms forwards;
+  display: none;
+}
+#subscription__email-incorrect p,
+#subscription__password-incorrect p {
+  margin: 0;
+}
+
+#subscription__email-incorrect {
+  right: -170px;
+  top: 125px;
+}
+
+#subscription__password-incorrect {
+  right: -170px;
+  top: 220px;
+}
+
+@keyframes pop-up-error {
+  0% {
+    transform: translatex(0px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 .newsletter form {
   display: flex;
   flex-direction: column;

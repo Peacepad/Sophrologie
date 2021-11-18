@@ -27,30 +27,26 @@
       </div>
       <nav class="header-nav">
         <ul>
-            <li class="header-nav__scrolling">
-              <a href="./textes_hypnose.html">Textes d'hypnose </a>
-              <ul class="header-nav__subnav">
-                <li>Sommeil</li>
-                <li>Bien être</li>
-                <li>Anti-Stress</li>
-                <li>Santé</li>
-                <li>Spiritualité</li>
-              </ul>
-            </li>
-            <li>Découverte</li>
-            <li>Formations</li>
-            <li>Votre thérapeute</li>
-            <li>Aide</li>
-          </ul>
+          <li class="header-nav__scrolling">
+            <a href="./textes_hypnose.html">Textes d'hypnose </a>
+            <ul class="header-nav__subnav">
+              <li>Sommeil</li>
+              <li>Bien être</li>
+              <li>Anti-Stress</li>
+              <li>Santé</li>
+              <li>Spiritualité</li>
+            </ul>
+          </li>
+          <li>Découverte</li>
+          <li>Formations</li>
+          <li>Votre thérapeute</li>
+          <li>Aide</li>
+        </ul>
       </nav>
 
       <div class="header-account">
         <ul>
-          <li>
-            <button class="header-account__button">
-              <i class="fas fa-user"></i> Mon compte
-            </button>
-          </li>
+          <li id="header-account__button"></li>
           <li class="header-account__cart">
             <i class="fas fa-shopping-basket"></i>
             <div class="cart-number">0</div>
@@ -65,23 +61,44 @@
         <p>Tout les champs sont obligatoires</p>
         <label
           >Adresse Email
-          <input type="email" name="email" id="register__email" />
+          <input
+            type="email"
+            name="email"
+            id="register__email"
+            value="padelamare@gmail.com"
+          />
         </label>
         <label
           >Mot de passe
-          <input type="password" id="register__password" />
+          <input type="password" id="register__password" value="Peacedu26" />
         </label>
         <label
           >Confirmez le mot de passe
-          <input type="password" id="register__password2" />
+          <input type="password" id="register__password2" value="Peacedu26" />
         </label>
         <input type="submit" id="register__submit" />
       </form>
+
+      <div id="subscription__email-incorrect" aria-hidden="true">
+        <p>
+          L'adresse email est incorrect et doit être sous le format:
+          exemple@email.fr
+        </p>
+      </div>
+
+      <div id="subscription__password-incorrect" aria-hidden="true">
+        <p>
+          Le mot de passe doit contenir au moins 8 caractères, 1 majuscule, 1 minuscule et 1 chiffre.
+        </p>
+      </div>
     </main>
 
     <aside class="connexion-subscribe">
-        <h2>Déjà inscrit ?</h2>
-        <a id="connexion-subscribe__button" href="connexion.html">Se connecter</a>
+      <h2>Déjà inscrit ?</h2>
+      <a id="connexion-subscribe__button" href="connexion.html">Se connecter</a>
     </aside>
+
+    <script src="../javascript/register.js"></script>
+    <script src="../javascript/header.js"></script>
   </body>
 </html>
