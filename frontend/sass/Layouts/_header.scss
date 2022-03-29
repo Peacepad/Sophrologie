@@ -7,16 +7,45 @@ header {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
   & a {
     text-decoration: none;
   }
 }
 
-.header-logo {
+// Logo
+
+.header-logo, .header-logo a {
   margin-right: 60px;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  
+  
 }
+
+#header-logo__title {
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top:-10px;
+  font-weight: 600;
+  font-size: 4em;
+  color: $secondary-color;
+}
+
+#header-logo__circle {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: solid 5px $primary-color;
+  position: absolute;
+  
+}
+
+
 
 .header-nav {
   width: 60%;

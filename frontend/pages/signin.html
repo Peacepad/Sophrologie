@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hypnose - Connexion</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    
+
+    <!--Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/8ee2930e57.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <div class="header-logo">
+          <div id="header-logo__circle"></div>
+          <h1 id="header-logo__title">Hypnose</h1>
+        </div>
+      </a>
+
+      <nav class="header-nav">
+        <ul>
+          <li class="header-nav__scrolling">
+            <a href="./textes_hypnose.html">Textes d'hypnose </a>
+            <ul class="header-nav__subnav">
+              <li>Sommeil</li>
+              <li>Bien être</li>
+              <li>Anti-Stress</li>
+              <li>Santé</li>
+              <li>Spiritualité</li>
+            </ul>
+          </li>
+          <li>Découverte</li>
+          <li>Formations</li>
+          <li>Votre thérapeute</li>
+          <li>Aide</li>
+        </ul>
+      </nav>
+
+      <div class="header-account">
+        <ul>
+          <li>
+            <a class="header-account__button" href="./signin.html">
+              <i class="fas fa-user"></i> Se connecter
+            </a>
+          </li>
+          <li class="header-account__cart">
+            <i class="fas fa-shopping-basket"></i>
+            <div class="cart-number">0</div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="signin-container">
+      <h2>Connexion<span> Hypnose</span></h2>
+
+      <form id="signin-form">
+        <label>
+          Email
+          <input name="email" id="signin-form__email" required="required" />
+        </label>
+
+        <label>
+          Mot de passe
+          <input type="password" name="password" id="signin-form__password" required="required" />
+        </label>
+
+        <input type="submit" id="signin-form__submit" />
+      </form>
+    </main>
+
+    <aside class="signin-container" id="signin-callout">
+      <p>Nouveau sur <span>Hypnose</span> ? <a href="./signup.html" alt="Créer un compte">Créer un compte</a></p>
+    </aside>
+
+    <!-- Scripts -->
+    <script src="../javascript/signin.js"></script>
+  </body>
+</html>
