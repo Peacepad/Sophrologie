@@ -49,6 +49,7 @@ function verifySignIn() {
       e.preventDefault();
     } else {
       
+      
 
       function sendSignIn() {
         let signinData = {
@@ -60,20 +61,19 @@ function verifySignIn() {
           headers: {
             "Content-Type": "application/json",
           },
+          
+          credentials: "include",
           body: JSON.stringify(signinData),
         }).then((res) => {
           console.log(res);
-          if (res.status === 200) {
-            console.log("coucou");
-          } else {
-            console.log("nope");
-          }
+          
         })
         .catch();
       }
 
       sendSignIn();
       e.preventDefault();
+      
     }
   });
 }

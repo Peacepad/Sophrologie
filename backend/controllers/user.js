@@ -52,6 +52,7 @@ exports.signup = (req, res, next) => {
 };
 
 exports.signin = (req, res, next) => {
+  console.log(req.cookies)
   try {
     connection
       .query(`SELECT email, password, user_id FROM User WHERE email=?`, [
@@ -82,11 +83,13 @@ exports.signin = (req, res, next) => {
                 "M0N_T0K3N_3ST_1NTR0UV4BL3"
               );
 
-              return res
-                .cookie("access_token", token, {
+              res
+                .cookie("access_token", token
+                , {
                   httpOnly: true,
-                  //secure: true,
+                  secure: false,
                   expires: new Date(Date.now() + 50000),
+                  sameSite: 'none'
                 })
                 .status(200)
                 .json({ message: "Connexion effectuée avec succès" });
