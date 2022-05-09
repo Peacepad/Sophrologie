@@ -1,0 +1,136 @@
+#book-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  align-items: center;
+}
+
+#left-cover {
+  background-color: #857070;
+  height: 500px;
+  width: 300px;
+  border-radius: 20px;
+
+  transform-style: preserve-3d;
+
+  top: -15px;
+  box-sizing: border-box;
+}
+
+#book-author {
+  top: 50px;
+  margin: auto;
+  color: white;
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%) rotatex(0deg);
+
+  &__firstname {
+    font-family: "Beau Rivage", cursive;
+    font-size: 2.7em;
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  &__lastname {
+    font-family: "Beau Rivage", cursive;
+    font-size: 4em;
+    position: absolute;
+    top: 35px;
+  }
+}
+
+#book-title {
+  position: absolute;
+  color: white;
+  bottom: 80px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2em;
+  width: 120px;
+  left: 30px;
+  transform-style: preserve-3d;
+  transform: rotatex(0deg);
+}
+
+#book-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transform-style: preserve-3d;
+  transform: rotatex(0deg);
+  & img {
+    height: 200px;
+    right: 200px;
+  }
+}
+
+#book-bottom-container {
+  height: 44px;
+  width: 300px;
+  background-color: white;
+  bottom: 1px;
+  position: absolute;
+
+  border-left: solid 4px #857070;
+  border-top: solid 4px #857070;
+  border-bottom: solid 4px #857070;
+  transform: rotatex(90deg) translatey(-22px);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#book-background {
+  background-color: $secondary-color;
+
+  transform-style: preserve-3d;
+
+  width: 100%;
+  height: 550px;
+  position: absolute;
+}
+
+.book-anim {
+  animation: book-anim 1000ms forwards;
+}
+
+.book-background-anim {
+  animation: book-background-anim 1000ms forwards;
+}
+
+.book-container-anim {
+  animation: book-container-anim 1000ms 500ms forwards;
+}
+
+@keyframes book-anim {
+  0% {
+    transform: rotatex(0deg);
+  }
+  100% {
+    transform: rotatex(90deg) translateZ(-29px);
+  }
+}
+
+@keyframes book-background-anim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotateX(60deg) translateZ(-90px) scaley(0.1);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@keyframes book-container-anim {
+  0% {
+    height: 600px;
+  }
+  100% {
+    height: 300px;
+    transform: translateY(-100px);
+  }
+}

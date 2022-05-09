@@ -9,6 +9,10 @@
 @import "./Layouts/login";
 @import "./Layouts/newsletter";
 @import "./Composants/button";
+@import "./Pages/admin";
+@import "./Composants/search";;
+@import "./Pages/text";
+@import "./Composants/book";
 
 * {
   box-sizing: border-box;
@@ -19,5 +23,6 @@ body {
   background-color: $back-color;
   margin: 0;
   padding: 0;
+  
 }
 

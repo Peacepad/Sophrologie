@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sophrologie</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script:wght@400;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8ee2930e57.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <div class="header-logo">
+          <div id="header-logo__circle"></div>
+          <h1 id="header-logo__title">Hypnose</h1>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <ul>
+          <li class="header-nav__scrolling">
+            <a href="./textes_hypnose.html">Textes d'hypnose </a>
+            <ul class="header-nav__subnav">
+              <li>Sommeil</li>
+              <li>Bien être</li>
+              <li>Anti-Stress</li>
+              <li>Santé</li>
+              <li>Spiritualité</li>
+            </ul>
+          </li>
+          <li>Découverte</li>
+
+          <li>Votre thérapeute</li>
+          <li>Aide</li>
+        </ul>
+      </nav>
+
+      <div class="search">
+        <form name="search" id="form-search">
+          <input type="text" />
+          <div class="search-icon"><img src="../pict/assets/search.png" /></div>
+        </form>
+      </div>
+
+      <div class="header-account">
+        <ul>
+          <li class="header-account__button"></li>
+          <li class="header-account__cart">
+            <i class="fas fa-shopping-basket"></i>
+            <div class="cart-number">0</div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <aside id="book-container">
+        <div id="book-background"></div>
+
+        <div id="left-cover">
+          <div id="book-author">
+            <span id="book-author__firstname">Annabelle</span>
+            <span id="book-author__lastname">Delamare</span>
+          </div>
+
+          <div id="book-image"></div>
+          <div id="book-title"></div>
+
+          <div id="book-bottom-container">
+            <div id="book-bottom"></div>
+          </div>
+        </div>
+      
+    </aside>
+
+    <main class="text-information">
+      <h2 class="text-information-title"></h2>
+
+      <div class="text-information-author">Par Annabelle Delamare</div>
+      <div class="text-information-more"><i class="fas fa-angle-down"></i></div>
+      <p class="text-information-description"></p>
+
+      <div class="text-information-price"></div>
+      <button class="add-cart">Ajouter au panier</button>
+    </main>
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/one_text.js"></script>
+  </body>
+</html>

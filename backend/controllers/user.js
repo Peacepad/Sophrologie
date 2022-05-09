@@ -52,7 +52,7 @@ exports.signup = (req, res, next) => {
 };
 
 exports.signin = (req, res, next) => {
-  console.log(req.cookies)
+  
   try {
     connection
       .query(`SELECT email, password, user_id FROM User WHERE email=?`, [
@@ -75,28 +75,22 @@ exports.signin = (req, res, next) => {
                   .status(401)
                   .json("Utilisateur ou mot de passe incorrect");
               } else {
+                
 
-              const token = jwt.sign(
-                {
-                  userId: results[0].user_id,
-                },
-                "M0N_T0K3N_3ST_1NTR0UV4BL3"
-              );
-
-              res
-                .cookie("access_token", token
-                , {
-                  httpOnly: true,
-                  secure: false,
-                  expires: new Date(Date.now() + 50000),
-                  sameSite: 'none'
-                })
-                .status(200)
-                .json({ message: "Connexion effectuée avec succès" });
-              // Si c'est bon on créer un token à partir de user_id
-            }
+                res
+                  .status(200)
+                  .json({
+                    token: jwt.sign({
+                      userId: results[0].user_id,
+                          isAdmin: true,
+                        },
+                        "MON_TOK3N_DID3NTIFICATION_3ST_INTROUVABL3",
+                        { expiresIn: "24h" }
+                    )
+                  });
+                // Si c'est bon on créer un token à partir de user_id
+              }
             });
-          
         }
       });
   } catch {

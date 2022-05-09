@@ -40,19 +40,22 @@
             </ul>
           </li>
           <li>Découverte</li>
-          <li>Formations</li>
+          
           <li>Votre thérapeute</li>
           <li>Aide</li>
         </ul>
       </nav>
 
+      <div class="search">
+        <form name="search" id="form-search">
+          <input type="text">
+          <div class="search-icon"><img src="../pict/assets/search.png"></div>
+        </form>
+      </div>
+
       <div class="header-account">
         <ul>
-          <li>
-            <a class="header-account__button" href="./signin.html">
-              <i class="fas fa-user"></i> Se connecter
-            </a>
-          </li>
+          <li class="header-account__button"></li>
           <li class="header-account__cart">
             <i class="fas fa-shopping-basket"></i>
             <div class="cart-number">0</div>
@@ -72,9 +75,15 @@
           tabac), améliorer votre condition physique générale et même perdre du
           poids.
         </p>
-        <div class="filter">
-          Trier par:
-          <select name="trier" id="trier">
+      </div>
+
+      <div class="filter-card">
+      <div class="filter-container">
+        
+        <form id="filter-form" name="filter-form">
+          <label for="trier">Trier par:</label>
+
+          <select name="trier" id="filter-form-tri">
             <option value="Tri du plus récent au plus ancien">
               Tri du plus récent au plus ancien
             </option>
@@ -84,55 +93,35 @@
             <option value="Tri par prix croissant">
               Tri par prix croissant
             </option>
-            <option value="Tri par les plus téléchargés">
-              Tri par les plus téléchargés
-            </option>
+
           </select>
-        </div>
+        
+        
+          
+        
+
+        
+          <label for="category">Catégorie:</label>
+          <select name="category" id="filter-form-category">
+            <option value="Toutes les catégories">
+              Toutes les catégories
+            </option>
+            <option value="Sommeil">Sommeil</option>
+            <option value="Bien-Être">Bien-Être</option>
+            <option value="Anti-Stress">Anti-Stress</option>
+            <option value="Santé">Santé</option>
+            <option value="Spiritualité">Spiritualité</option>
+            0
+          </select>
+        </form>
       </div>
+
       <div class="card-container">
-        <div class="card">
-          <div class="card-header">Bien dormir</div>
-          <div class="card-img">
-            <img src="../pict/biendormir.jpg" alt="bien dormir" />
-          </div>
-          <div class="card-description">
-            Ce texte explique comment bien dormir, découvrez les méthodes qui
-            vous permettrons dès ce soir de profiter ...
-          </div>
-          <div class="card-price">5€</div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">Augmenter votre productivité</div>
-          <div class="card-img">
-            <img
-              src="../pict/productivite.jpg"
-              alt="Augmenter votre productivité"
-            />
-          </div>
-          <div class="card-description">
-            Vous allez en quelques temps multiplier votre rendement, changer
-            votre rapport au travail. Vos collègues n'en ...
-          </div>
-          <div class="card-price">2,5€</div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">Introduction hypnotique</div>
-          <div class="card-img">
-            <img
-              src="../pict/introhypno.jpg"
-              alt="Augmenter votre productivité"
-            />
-          </div>
-          <div class="card-description">
-            Se créer un océan paisible sur lequel se déposer, ou se détendre
-            progressivement. Accéder à l’hypnose en ...
-          </div>
-          <div class="card-price">2,5€</div>
-        </div>
+       
       </div>
+    </div>
     </main>
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/textes-hypnose.js"></script>
   </body>
 </html>

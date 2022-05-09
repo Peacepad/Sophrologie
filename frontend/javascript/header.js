@@ -1,30 +1,41 @@
 function isConnected() {
   const token = localStorage.getItem("token");
+  let documentLocation = document.location.href;
 
   if (token == undefined) {
     let linkForAccount = document.createElement("a");
 
-    linkForAccount.setAttribute("href", "./pages/signin.html");
-    linkForAccount.className = "header-account__button";
+    if (documentLocation.includes("index.html")) {
+      linkForAccount.setAttribute("href", "./pages/signin.html");
+    } else {
+      linkForAccount.setAttribute("href", "./signin.html");
+    }
+
+    linkForAccount.className = "header-account__link";
 
     document
-      .querySelector(`#header-account__button`)
+      .querySelector(`.header-account__button`)
       .appendChild(linkForAccount);
 
     document.querySelector(
-      ".header-account__button"
+      ".header-account__link"
     ).innerHTML = `<i class="fas fa-user"></i> Se connecter`;
   } else {
     let linkForAccount = document.createElement("a");
 
-    linkForAccount.setAttribute("href", "./pages/signin.html");
-    linkForAccount.className = "header-account__button";
+    // lien différent en fonction de la page d'accueil
+    if (documentLocation.includes("index.html")) {
+      linkForAccount.setAttribute("href", "./pages/signin.html");
+    } else {
+      linkForAccount.setAttribute("href", "./signin.html");
+    }
+    linkForAccount.className = "header-account__link";
 
     document
-      .querySelector(`#header-account__button`)
+      .querySelector(`.header-account__button`)
       .appendChild(linkForAccount);
     document.querySelector(
-      ".header-account__button"
+      ".header-account__link"
     ).innerHTML = `<i class="fas fa-user"></i> Mon compte`;
   }
 }

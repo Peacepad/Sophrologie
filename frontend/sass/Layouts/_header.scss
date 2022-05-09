@@ -48,7 +48,7 @@ header {
 
 
 .header-nav {
-  width: 60%;
+  width: 50%;
 }
 .header-nav ul {
   display: flex;
@@ -130,6 +130,9 @@ header {
   
 }
 
+.header-account__link {
+  color: white
+}
 // --------------- Menu déroulant
 
 .header-nav__scrolling {

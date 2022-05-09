@@ -52,23 +52,29 @@ function verifySignIn() {
       
 
       function sendSignIn() {
+
         let signinData = {
           email: emailValue,
           password: passwordValue,
         };
+
         fetch(`http://localhost:3000/api/user/signin`, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
           },
+          credentials:"include",
           
-          credentials: "include",
           body: JSON.stringify(signinData),
         }).then((res) => {
-          console.log(res);
-          
+          return res.json()
         })
-        .catch();
+        .then((dataFromServer) => {
+          localStorage.setItem("token", dataFromServer.token)
+        })
+        .catch(
+          //
+        );
       }
 
       sendSignIn();
@@ -83,4 +89,5 @@ verifySignIn();
 function test() {
   console.log(document.cookie)
 }
-test()
+test();
+

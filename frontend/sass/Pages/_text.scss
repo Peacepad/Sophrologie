@@ -1,0 +1,123 @@
+#text-image__container {
+  height: 0px;
+  & img {
+    border: solid 3px $secondary-color;
+    border-radius: 5px;
+    height: 100%;
+  }
+}
+
+.text-information-title {
+  color: $primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+
+  margin-bottom: 5px;
+}
+
+.text-information-author {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: $primary-color;
+  display: flex;
+  justify-content: center;
+}
+
+.text-information-description {
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.1em;
+  transform: scaley(0);
+  margin-top: 50px;
+}
+
+.text-information-anim {
+  animation: 1000ms text-information-anim 500ms forwards;
+}
+
+.text-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-cart {
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  background: linear-gradient(
+    90deg,
+    darken($secondary-color, 20%),
+    darken($secondary-color, 10%)
+  );
+  cursor: pointer;
+  margin: auto;
+
+  margin-top: 50px;
+  transform: scaley(0);
+}
+
+.text-information-more {
+  animation: text-information-more-anim 1000ms infinite alternate-reverse;
+}
+
+.appear {
+  animation: 1000ms apparition forwards;
+}
+
+.disappear {
+  animation: 1000ms disappear forwards;
+}
+
+@keyframes text-information-more-anim {
+  0% {
+    transform: translatey(0)
+  }
+  100% {
+    transform: translatey(-5px)
+  }
+}
+@keyframes text-information-anim {
+  0% {
+  }
+  80% {
+    transform-origin: top;
+    transform: translatey(-120px) scaleY(0.8);
+  }
+  90% {
+    transform-origin: top;
+    transform: scaleY(1.05) translatey(-110px);
+  }
+  100% {
+    transform-origin: top;
+    transform: translatey(-100px);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    transform: scaley(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaley(1);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

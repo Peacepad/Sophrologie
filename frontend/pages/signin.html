@@ -52,11 +52,7 @@
 
       <div class="header-account">
         <ul>
-          <li>
-            <a class="header-account__button" href="./signin.html">
-              <i class="fas fa-user"></i> Se connecter
-            </a>
-          </li>
+          <li class="header-account__button"></li>
           <li class="header-account__cart">
             <i class="fas fa-shopping-basket"></i>
             <div class="cart-number">0</div>
@@ -79,7 +75,9 @@
           <input type="password" name="password" id="signin-form__password" required="required" />
         </label>
 
-        <input type="submit" id="signin-form__submit" />
+        <button type="submit" id="signin-form__submit">Envoyer
+          <div class="submit-spinner"><i class="fas fa-spinner"></i></div>
+        </button>
       </form>
     </main>
 
@@ -89,5 +87,6 @@
 
     <!-- Scripts -->
     <script src="../javascript/signin.js"></script>
+    <script src="../javascript/header.js"></script>
   </body>
 </html>

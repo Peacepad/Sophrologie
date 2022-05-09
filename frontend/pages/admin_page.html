@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sophrologie</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8ee2930e57.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <div class="header-logo">
+          <div id="header-logo__circle"></div>
+          <h1 id="header-logo__title">Hypnose</h1>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <ul>
+          <li class="header-nav__scrolling">
+            <a href="./textes_hypnose.html">Textes d'hypnose </a>
+            <ul class="header-nav__subnav">
+              <li>Sommeil</li>
+              <li>Bien être</li>
+              <li>Anti-Stress</li>
+              <li>Santé</li>
+              <li>Spiritualité</li>
+            </ul>
+          </li>
+          <li>Découverte</li>
+          <li>Formations</li>
+          <li>Votre thérapeute</li>
+          <li>Aide</li>
+        </ul>
+      </nav>
+
+      <div class="header-account">
+        <ul>
+          <li class="header-account__button"></li>
+          <li class="header-account__cart">
+            <i class="fas fa-shopping-basket"></i>
+            <div class="cart-number">0</div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="form-text__container">
+        <h2>Ajouter un texte</h2>
+      <form id="form-text">
+        <label for="title">
+          Titre:
+          <input type="text" name="title" id="form-text-title" required />
+        </label>
+
+        <label for="description">
+          Description:
+          <textarea name="description" id="form-text-description" required></textarea>
+        </label>
+        <label for="price">
+          Prix en €:
+          <input type="number" step="0.01" name="price" id="form-text-price" required />
+        </label>
+        <label for="category1">
+          Catégorie 1:
+          <select name="category1" id="form-text-category1" required>
+            <option value="Selectionner une categorie">
+              Selectionner une catégorie
+            </option>
+            <option value="Sommeil">Sommeil</option>
+            <option value="Bien-Être">Bien-Être</option>
+            <option value="Anti-Stress">Anti-Stress</option>
+            <option value="Santé">Santé</option>
+            <option value="Spiritualité">Spiritualité</option>
+          </select>
+        </label>
+        <label for="category2">
+          Catégorie 2:
+          <select name="category2" id="form-text-category2">
+            <option value="Selectionner une categorie">
+              Selectionner une catégorie
+            </option>
+            <option value="Sommeil">Sommeil</option>
+            <option value="Bien-Être">Bien-Être</option>
+            <option value="Anti-Stress">Anti-Stress</option>
+            <option value="Santé">Santé</option>
+            <option value="Spiritualité">Spiritualité</option>
+          </select>
+        </label>
+        <label for="picture">
+            Image d'illustration:
+          <input type="file" name="picture" id="form-text-picture" required/>
+        </label>
+        <label for="PDF">
+            Fichier PDF:
+          <input type="file" name="PDF" id="form-text-PDF" />
+        </label>
+        
+        <input type="submit"/>
+      </form>
+    </main>
+
+    <article>
+      <h2>Textes ajoutés</h2>
+      <ul id="text-list"></div>
+    </article>
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/admin.js"></script>
+  </body>
+</html>

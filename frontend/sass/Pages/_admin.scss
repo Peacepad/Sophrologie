@@ -1,0 +1,29 @@
+.form-text__container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#form-text {
+  width: 90%;
+  display: flex;
+    justify-content: space-between;
+    
+  & label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+  }
+}
+
+
+
+.text-form__img {
+  max-height: 100px;;
+}
